@@ -53,7 +53,7 @@ PASSWORD=DFGUIOKVLER4234CDW87R4   # Contraseña de aplicación del usuario de gs
 DOMINIO=midominio.com    # Nombre del dominio de Gsuite
 ```
 
-##### Una vez que esten listos los valores, ejecutar el script de instalación
+##### Una vez que esten listos los valores, ejecutar el script de instalación y esperar a que concluya, esto puede tardar dependiendo los recursos del servidor
 
 ```bash
 [root@gitlab gitlab_install]# ./instalador.sh

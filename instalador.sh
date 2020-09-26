@@ -8,12 +8,12 @@ echo "[TAREA 1] Actualizar SO e instalar prerequisitos"
 sudo dnf update -y >/dev/null 2>&1
 sudo dnf install -y curl policycoreutils python3-policycoreutils nano net-tools >/dev/null 2>&1
 
-# Actualizar Sistema Operativo e instalar prerequisitos
+# Instalar servicio Gitlab
 echo "[TAREA 2] Instalar servicio Gitlab"
 curl -sS https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.rpm.sh | sudo bash >/dev/null 2>&1
 sudo dnf install -y gitlab-ce >/dev/null 2>&1
 
-# Actualizar Sistema Operativo e instalar prerequisitos
+# Configurar servicio Gitlab
 echo "[TAREA 3] Configurar servicio Gitlab"
 sudo cp /etc/gitlab/gitlab.rb /etc/gitlab/gitlab.rb.bck
 sudo sed -i "s/external_url 'http/#external_url 'http/g" /etc/gitlab/gitlab.rb
