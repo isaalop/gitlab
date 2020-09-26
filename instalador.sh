@@ -17,7 +17,7 @@ sudo dnf install -y gitlab-ce >/dev/null 2>&1
 echo "[TAREA 3] Configurar servicio Gitlab"
 sudo cp /etc/gitlab/gitlab.rb /etc/gitlab/gitlab.rb.bck
 sudo sed -i "s/external_url 'http/#external_url 'http/g" /etc/gitlab/gitlab.rb
-sudo cat >>/etc/gitlab/gitlab.rb<<EOF
+sudo bash -c 'cat << EOF >>/etc/gitlab/gitlab.rb
 external_url 'https://gitlab.dominio.com'
 
 # Configuracion certificado SSL
@@ -41,7 +41,7 @@ gitlab_rails['smtp_tls'] = false
 gitlab_rails['smtp_openssl_verify_mode'] = 'peer'
 gitlab_rails['gitlab_email_from'] = 'gitlab@dominio.com'
 gitlab_rails['gitlab_email_reply_to'] = 'noreply@dominio.com'
-EOF
+EOF'
 
 # Reemplazar valores desde archivo de variables
 sudo sed -i "s/gitlab.dominio.com/$URL/g" /etc/gitlab/gitlab.rb
