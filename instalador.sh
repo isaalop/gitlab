@@ -17,7 +17,7 @@ sudo dnf install -y gitlab-ce >/dev/null 2>&1
 echo "[TAREA 3] Configurar servicio Gitlab"
 sudo cp /etc/gitlab/gitlab.rb /etc/gitlab/gitlab.rb.bck
 sudo sed -i "s/external_url 'http/#external_url 'http/g" /etc/gitlab/gitlab.rb
-cat >>/etc/gitlab/gitlab.rb<<EOF
+sudo cat >>/etc/gitlab/gitlab.rb<<EOF
 external_url 'https://gitlab.dominio.com'
 
 # Configuracion certificado SSL
