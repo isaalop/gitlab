@@ -1,0 +1,4 @@
+URL=    # Nombre del dominio con el que se configurará el serviciod de Gitlab
+EMAIL=  # Usuario de correo electrónico de Gsuite
+PASSWORD=   # Contraseña de aplicación del usuario de gsuite
+DOMINIO=    # Nombre del dominio de Gsuite
